@@ -1,0 +1,612 @@
+/* Par defaut */
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway, sans-serif;
+}
+
+/* Body */
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    margin: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 35px;
+
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    position: sticky;
+    height: 79px;
+    
+}
+
+/* logo */
+#logo {
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* Nav liste */
+nav ul {
+    height: 35px;
+    list-style: none;
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 68px;
+}
+
+/* Nav lien */
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: normal ;
+    padding: 10px;
+    position: relative; 
+    transition: color 0.3s ease-in-out;
+}
+
+/* Nav lien effet barre bleue */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #007bff; 
+    transition: width 0.3s ease-in-out;
+}
+
+/* Nav lien hover couleur */
+nav a:hover {
+    color: #007bff;
+}
+
+/* Nav lien hover out */
+nav a:hover::after {
+    width: 100%; 
+}
+
+
+/* Section de recherche */
+.search-section {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 35px;
+
+}
+
+/* Titre et sous-titre */
+.search-section h1 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25.83px;
+    margin-bottom: 8px;
+
+   
+}
+
+.search-section p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Barre de recherche */
+.search-bar {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    max-width: 400px;
+    border-style: solid;
+    border-color: #F2F2F2;
+    border-width: 1px;
+    background: white;
+    border-radius: 15px;
+    width: 100%;
+    
+}
+
+/* icone de localisation */
+.search-bar .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    flex: 0 0 60px;
+    padding: 10px;
+    background: #f2f2f2;
+    border-style: solid;
+    border-width: 1px ;
+    border-color: #F2F2F2;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-right: 10px;
+   
+}
+
+.search-bar .icon i{
+    color: #000000;
+}
+
+/* Champ de saisie */
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: black;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+/* Champ de saisie - texte placeholder */
+.search-bar ::placeholder{
+    color: black;
+}
+
+/* Bouton de recherche */
+.search-bar button {
+    background: #0065FC;
+    color: white;
+    font-weight: bold;
+    border: none;
+    height: 50px;
+    padding: 10px 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0065FC;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.search-bar button:hover {
+    background: #0056b3;
+}
+
+/* Filtres */
+.filters {
+    display: flex;
+    justify-content: justify-content;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+
+
+/* Filtres boutton */
+.filters button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: white;
+    height: 50px;
+    border: 2px solid #F2F2F2;
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font: raleway;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
+/* Filtres boutton effet */
+.filters button:hover {
+    background: #DEEBFF;
+    color: #000;
+}
+
+/* Icone-info */
+.info-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-message i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #0065FC;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+
+}
+
+.filters button i{
+    color: #0065FC;
+    font-size: 22px;
+    
+}
+
+/* div hébergment */
+.hebergement{
+    display: flex;
+    width: 1340px;
+    height: 614px;
+    gap: 40px;
+}
+
+
+.hebergement-layout{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+   
+    
+
+}
+
+.hebergement-container{
+    display: flex;
+    flex: 2; 
+    flex-direction: column;
+    width: 871px;
+    height: 614px;
+    gap: 30px;
+    border-radius: 15px;
+    padding: 30px;
+    background: #F2F2F2;
+    flex: 2;  
+}
+
+
+.hebergement h2{
+    width: 811px;
+    height: 26px;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25.83px;
+    letter-spacing: 0%;
+
+
+
+
+}
+
+.cards-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 250px;
+    height: 207px;
+    gap: 4px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px 0px #0000001A;
+}
+
+.card-content{
+    width: 243px;
+    height: 64px;
+    padding-right: 15px;
+    padding-left: 15px;
+    gap: 8px;
+
+}
+
+.hebergement h3{
+    width: 220px;
+    height: 19px;
+    font-size: 19px;
+    font-weight: 700;
+    font-family: Raleway;
+    line-height: 18px;
+    color: #000;
+}
+
+.hebergement p{
+    width: 220px;
+    height: 16px;
+    width: 220px;
+    height: 16px;
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+
+}
+
+
+.card-container img {
+    width: 250px;
+    height: 124px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-width: 5px;
+    border: 5px solid #FFFFFF
+}
+
+.note{
+    display:inline
+    width: 81px;
+    height: 13.25px;
+
+}
+
+.star-blue{
+    color: #0065FC;
+    width: 14px;
+    height: 13px;
+    top: 51px;
+    left: 15px;
+
+}
+
+.star-grey{
+    color: #F2F2F2;
+    width: 14px;
+    height: 13px;
+    top: 51px;
+    left: 15px;
+
+}
+
+.euro{
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.44px;
+    letter-spacing: 0%;
+
+}
+
+
+.show-more{
+    width: 811px;
+    height: 21px;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.13px;
+    letter-spacing: 0%;
+    color: #000;
+}
+
+.popular-container{
+    display: flex;
+    flex: 1;  
+    flex-direction: column;
+    width: 429px;
+    height: 614px;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    padding: 30px;
+    gap: 30px;
+}
+
+
+.popular-container-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 369px;
+    height: 26px;
+}
+
+.popular-container-title i{
+    color: #0065FC;
+}
+
+.popular-container h2{
+    width: 300px;
+    height: 26px;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25.83px;
+    letter-spacing: 0%;
+    color: #000000;
+}
+
+
+.popular-card{
+    display: flex;
+    align-items: center;
+    width: 369px;
+    height: 146px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px 0px #0000001A;
+}
+
+.popular-content{
+    width: 246px;
+    height: 136px;
+    top: 5px;
+    left: 123px;
+    gap: 24px;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+
+}
+
+
+popular-content-text{
+    width: 226px;
+    height: 85px;
+    gap: 5px;
+
+}
+
+
+
+.popular-content-text h3{
+    width: 226px;
+    height: 19px;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.78px;
+    letter-spacing: 0%;
+    color: #000000;
+}
+
+
+.popular-content-text p{
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.44px;
+    letter-spacing: 0%;
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.44px;
+    letter-spacing: 0%;
+}
+
+.activites{
+    width: 1340px;
+    height: 559px;
+    gap: 30px;
+    padding: 30px;
+}
+
+.activites h2{
+    width: 1280px;
+    height: 30px;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25.83px;
+    letter-spacing: 0%;
+    color:#000
+}
+
+.activites-wrapper{
+    display: flex;
+    width: 1280px;
+    height: 439px;
+    gap: 30px;
+}
+
+.activite-card{
+    width: 297.5px;
+    height: 439px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px 0px #0000001A;
+}
+
+.activite-content{
+    width: 297.5px;
+    height: 59px;
+    gap: 10px;
+    padding-top: 20px;
+    padding-right: 19px;
+    padding-bottom: 20px;
+    padding-left: 19px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: white;
+}
+
+.activite-content p{
+    width: 259.5px;
+    height: 19px;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.78px;
+    letter-spacing: 0%;
+    color: #000;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1340px;
+    height: 163px;
+    background-color: #F2F2F2;
+    overflow: hidden;
+    
+}
+
+.footer-column{
+    flex: 1;
+    display: flex;
+    flex-direction:column;
+    width: 446px;
+    height: 163px;
+    gap: 15px;
+    padding: 20px;
+}
+
+.footer-column h3{
+    white-space: nowrap;
+    width: 77px;
+    height: 21px;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.13px;
+    letter-spacing: 0%;
+    color: #000;
+}
+
+
+.footer-column ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.footer-column li{
+margin-bottom: 10px;
+}
+
+.footer-column ul li a{
+    text-decoration: none;
+    width: 176;
+    height: 19;
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.78px;
+    letter-spacing: 0%;
+    color: #000;
+
+}

@@ -8,14 +8,24 @@
 /* Body */
 
 body {
+    display: flex;
+    justify-content: center;
     background-color: #ffffff;
     color: #333;
     margin: 0px;
-    padding-left: 50px;
-    padding-right: 50px;
-    gap: 35px;
-
 }
+
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
 
 /* Header */
 header {
@@ -31,7 +41,6 @@ header {
 /* logo */
 #logo {
     display: flex;
-    padding: 30px;
     align-items: center;
     gap: 10px;
 }
@@ -117,8 +126,7 @@ nav a:hover::after {
     border-width: 1px;
     background: white;
     border-radius: 15px;
-    width: 100%;
-    
+
 }
 
 /* icone de localisation */
@@ -223,6 +231,7 @@ nav a:hover::after {
 .info-message {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
     gap: 10px;
 }
 
@@ -250,9 +259,10 @@ nav a:hover::after {
 /* div hébergment */
 .hebergement{
     display: flex;
-    width: 1340px;
-    height: 614px;
     gap: 40px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 
@@ -261,7 +271,8 @@ nav a:hover::after {
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
-   
+    width: 100%;
+    max-width: 100%;
     
 
 }
@@ -270,8 +281,6 @@ nav a:hover::after {
     display: flex;
     flex: 2; 
     flex-direction: column;
-    width: 871px;
-    height: 614px;
     gap: 30px;
     border-radius: 15px;
     padding: 30px;
@@ -306,8 +315,6 @@ nav a:hover::after {
     display: flex;
     flex-direction: column;
     background: white;
-    width: 250px;
-    height: 207px;
     gap: 4px;
     padding-bottom: 15px;
     border-radius: 20px;
@@ -315,8 +322,6 @@ nav a:hover::after {
 }
 
 .card-content{
-    width: 243px;
-    height: 64px;
     padding-right: 15px;
     padding-left: 15px;
     gap: 8px;
@@ -336,8 +341,6 @@ nav a:hover::after {
 .hebergement p{
     width: 220px;
     height: 16px;
-    width: 220px;
-    height: 16px;
     font-family: Raleway;
     font-weight: 400;
     font-size: 14px;
@@ -348,12 +351,12 @@ nav a:hover::after {
 
 
 .card-container img {
-    width: 250px;
+    width: 260px;
     height: 124px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-width: 5px;
-    border: 5px solid #FFFFFF
+    border: 1px solid #FFFFFF
 }
 
 .note{
@@ -406,12 +409,11 @@ nav a:hover::after {
     display: flex;
     flex: 1;  
     flex-direction: column;
-    width: 429px;
-    height: 614px;
     background-color: #F2F2F2;
     border-radius: 15px;
     padding: 30px;
     gap: 30px;
+    min-height: 100%;
 }
 
 
@@ -443,7 +445,7 @@ nav a:hover::after {
     display: flex;
     align-items: center;
     width: 369px;
-    height: 146px;
+    height: 160px;
     background: white;
     border-radius: 20px;
     box-shadow: 0px 3px 15px 0px #0000001A;
@@ -462,14 +464,10 @@ nav a:hover::after {
 
 }
 
-
-popular-content-text{
-    width: 226px;
-    height: 85px;
-    gap: 5px;
-
+.popular-card img{
+    height: 160px;
+    width: 369px
 }
-
 
 
 .popular-content-text h3{
@@ -498,10 +496,11 @@ popular-content-text{
 }
 
 .activites{
-    width: 1340px;
     height: 559px;
     gap: 30px;
-    padding: 30px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box
 }
 
 .activites h2{
@@ -533,7 +532,6 @@ popular-content-text{
     width: 297.5px;
     height: 59px;
     gap: 10px;
-    padding-top: 20px;
     padding-right: 19px;
     padding-bottom: 20px;
     padding-left: 19px;
@@ -557,7 +555,6 @@ popular-content-text{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 1340px;
     height: 163px;
     background-color: #F2F2F2;
     overflow: hidden;
@@ -570,7 +567,6 @@ popular-content-text{
     flex-direction:column;
     width: 446px;
     height: 163px;
-    gap: 15px;
     padding: 20px;
 }
 

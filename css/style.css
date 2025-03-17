@@ -9,21 +9,25 @@
 
 body {
     display: flex;
-    justify-content: center;
-    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
     color: #333;
     margin: 0px;
+    min-height: 100vh;
 }
 
 
 .container {
     max-width: 1440px;
-    width: 100%;
     padding: 0 50px;
     display: flex;
     flex-direction: column;
     gap: 30px;
     box-sizing: border-box;
+    flex: 1;
+
 }
 
 
@@ -51,8 +55,6 @@ nav ul {
     height: 35px;
     list-style: none;
     display: flex;
-    padding-left: 50px;
-    padding-right: 50px;
     gap: 68px;
 }
 
@@ -258,34 +260,37 @@ nav a:hover::after {
 
 /* div hébergment */
 .hebergement{
-    display: flex;
-    gap: 40px;
-    max-width: 100%;
-    width: 100%;
-    box-sizing: border-box;
+    .hebergement {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        width: 100%;
+        max-width: 1340px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    
 }
 
 
 .hebergement-layout{
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     gap: 40px;
     width: 100%;
-    max-width: 100%;
+    max-width: 1340px;
     
 
 }
 
 .hebergement-container{
     display: flex;
-    flex: 2; 
     flex-direction: column;
     gap: 30px;
     border-radius: 15px;
     padding: 30px;
     background: #F2F2F2;
-    flex: 2;  
+    flex: 2;
+
 }
 
 
@@ -314,6 +319,7 @@ nav a:hover::after {
 .card-container{
     display: flex;
     flex-direction: column;
+    width: 250px;
     background: white;
     gap: 4px;
     padding-bottom: 15px;
@@ -351,7 +357,7 @@ nav a:hover::after {
 
 
 .card-container img {
-    width: 260px;
+    width: 250px;
     height: 124px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -360,10 +366,9 @@ nav a:hover::after {
 }
 
 .note{
-    display:inline
-    width: 81px;
+    display:inline;
+    width : 81px;
     height: 13.25px;
-
 }
 
 .star-blue{
@@ -407,13 +412,18 @@ nav a:hover::after {
 
 .popular-container{
     display: flex;
-    flex: 1;  
+    flex: 1;
     flex-direction: column;
     background-color: #F2F2F2;
     border-radius: 15px;
+}
+
+.popular-cards-wrapper{
+    display: flex;
+    flex-direction: column;
     padding: 30px;
     gap: 30px;
-    min-height: 100%;
+
 }
 
 
@@ -438,6 +448,7 @@ nav a:hover::after {
     line-height: 25.83px;
     letter-spacing: 0%;
     color: #000000;
+    padding: 30px;
 }
 
 
@@ -497,6 +508,7 @@ nav a:hover::after {
 
 .activites{
     height: 559px;
+    padding: 30px;
     gap: 30px;
     max-width: 100%;
     width: 100%;
@@ -516,7 +528,7 @@ nav a:hover::after {
 
 .activites-wrapper{
     display: flex;
-    width: 1280px;
+    width: 100%;
     height: 439px;
     gap: 30px;
 }
@@ -551,58 +563,283 @@ nav a:hover::after {
     color: #000;
 }
 
-.footer{
+/* Footer */
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    height: 163px;
     background-color: #F2F2F2;
-    overflow: hidden;
-    
+    padding: 40px 50px;
+    width: 100%;
+    margin-top: auto;
 }
 
-.footer-column{
-    flex: 1;
-    display: flex;
-    flex-direction:column;
-    width: 446px;
-    height: 163px;
-    padding: 20px;
+/* Colonnes du footer */
+.footer-column {
+    flex: 1; 
+    max-width: 300px;
 }
 
-.footer-column h3{
-    white-space: nowrap;
-    width: 77px;
-    height: 21px;
-    font-family: Raleway;
-    font-weight: 700;
+/* Titres du footer */
+.footer-column h3 {
     font-size: 18px;
-    line-height: 21.13px;
-    letter-spacing: 0%;
+    font-weight: 700;
+    margin-bottom: 15px;
     color: #000;
 }
 
-
-.footer-column ul{
+/* Listes du footer */
+.footer-column ul {
     list-style: none;
-    margin: 0px;
-    padding: 0px;
-
+    padding: 0;
+    margin: 0;
 }
 
-.footer-column li{
-margin-bottom: 10px;
+/* Liens du footer */
+.footer-column li {
+    margin-bottom: 10px;
 }
 
-.footer-column ul li a{
+.footer-column a {
     text-decoration: none;
-    width: 176;
-    height: 19;
-    font-family: Raleway;
-    font-weight: 400;
+    color: #333;
     font-size: 16px;
-    line-height: 18.78px;
-    letter-spacing: 0%;
-    color: #000;
+    transition: color 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        max-width: 100%;  
+        padding: 0 50px;
+    }
+
+    .hebergement {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .hebergement-layout {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+        align-items: flex-start;
+        align-items: stretch;
+        width: 100%;
+        gap: 50px;
+    }
+
+    .note{
+        width: 100%;
+    }
+
+    .popular-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .popular-cards-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 20px; 
+        padding-top: 10px;
+    }
+
+    .popular-card {
+        width: 275px;
+        height: 146px;
+        border-radius: 20px;
+
+    }
+
+    .popular-card img{
+        width: 91px;
+        height: 146px;
+        border-radius: 1%;
+    }
+
+    .popular-content {
+        display: flex;
+        flex-direction: column;
+        width: 163px;
+        height: 136px;
+        top: 5px;
+        left: 91px;
+        gap: 5px;
+        padding-top: 10px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px;        
+    }
+
+    .popular-card .popular-content h3 {
+        font-family: Raleway;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        width: 163px;
+    }
+        
+
+    .activites{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .activites-wrapper {
+        width: 100%;
+        max-width: 924px;
+    }
+
+    .activite-card {
+        width: 193px;
+        height: 270px;
+        border-radius: 20px;
+    }
+
+
+    .activite-card img {
+        width: 193px;
+        height: 200px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+
+    .activite-content p {
+        width: 155.5px;
+        height: 38px;
+        font-family: Raleway;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+
+
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 375px) {
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: 115px;
+    }
+
+    header #logo{
+
+        width: 120px;
+        padding: 30px;
+
+    }
+
+    nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 375px;
+        height: 36px;
+        gap: 15px;
+        
+    }
+
+
+    .search-section{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        width: 100%;
+    }
+
+    #search-section-title{
+        display: flex;
+        flex-direction: column;
+        width: 335px;
+        gap: 8px;
+    }
+
+    #search-section-title h1{
+        width: 335px;
+        font-family: Raleway;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 100%;
+        letter-spacing: -1px;
+    }
+
+
+    .search-bar{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .filters{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: 10px;
+        width: 100%;
+        max-width: 335px;
+        margin: auto;
+    }
+
+    .filters-wrapper{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+    }
+
+
+    .filters-wrapper button {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+    .hebergement-layout {
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+    .hebergement .cards-wrapper{
+        display: flex;
+        flex-direction: column;
+        max-width: 375px;
+        width: 100%;
+    }
+
+    .hebergement-container{
+        max-width: 375px;
+        width: 100%;
+    }
 
 }

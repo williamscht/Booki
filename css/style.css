@@ -15,12 +15,14 @@ body {
     background-color: white;
     color: #333;
     margin: 0px;
+    width: 100%;
     min-height: 100vh;
 }
 
-
+/* Conteneur global qui définit la mise en page centrale du site */
 .container {
     max-width: 1440px;
+    width: 100%;
     padding: 0 50px;
     display: flex;
     flex-direction: column;
@@ -30,7 +32,7 @@ body {
 
 }
 
-
+/* ====== HEADER ====== */
 /* Header */
 header {
     display: flex;
@@ -39,6 +41,8 @@ header {
     background: white;
     position: sticky;
     height: 79px;
+    max-width: 100%;
+    width: 100%;
     
 }
 
@@ -49,16 +53,17 @@ header {
     gap: 10px;
 }
 
-
+/* ====== NAVIGATION ====== */
 /* Nav liste */
 nav ul {
-    height: 35px;
+   
+    margin-top: -25px;
     list-style: none;
     display: flex;
     gap: 68px;
 }
 
-/* Nav lien */
+/* Nav style lien */
 nav a {
     text-decoration: none;
     color: #333;
@@ -91,7 +96,9 @@ nav a:hover::after {
 }
 
 
-/* Section de recherche */
+
+/* ====== SECTION DE RECHERCHE ====== */
+/* Mise en page de la section de recherche */
 .search-section {
     display: flex;
     flex-direction: column;
@@ -120,6 +127,7 @@ nav a:hover::after {
 /* Barre de recherche */
 .search-bar {
     display: flex;
+    flex-direction: row;
     align-items: center;
     height: 50px;
     max-width: 400px;
@@ -129,6 +137,12 @@ nav a:hover::after {
     background: white;
     border-radius: 15px;
 
+}
+
+
+.search-bar form{
+    display: flex;
+    flex-direction: row;
 }
 
 /* icone de localisation */
@@ -160,9 +174,9 @@ nav a:hover::after {
     outline: none;
     font-weight: bold;
     color: black;
-    padding: 10px 15px;
     font-size: 18px;
     border-radius: 15px;
+    text-align: center;
 }
 
 /* Champ de saisie - texte placeholder */
@@ -170,8 +184,16 @@ nav a:hover::after {
     color: black;
 }
 
+.search-bar input{
+    overflow: hidden;
+}
+
+.search-icon {
+    display: none;
+}
+
 /* Bouton de recherche */
-.search-bar button {
+.search-button {
     background: #0065FC;
     color: white;
     font-weight: bold;
@@ -188,19 +210,24 @@ nav a:hover::after {
     transition: background 0.3s ease-in-out;
 }
 
-.search-bar button:hover {
+.search-button:hover {
     background: #0056b3;
 }
 
+
+/* ====== FILTRES ====== */
 /* Filtres */
 .filters {
     display: flex;
-    justify-content: justify-content;
-    gap: 10px;
-    margin-top: 20px;
-    flex-wrap: wrap;
+    gap: 15px;
 }
 
+
+.filters-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
 
 
 /* Filtres boutton */
@@ -258,30 +285,33 @@ nav a:hover::after {
     
 }
 
-/* div hébergment */
+
+/* ====== SECTION HÉBERGEMENTS ====== */
+/*  Mise en page globale */
 .hebergement{
-    .hebergement {
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        width: 100%;
-        max-width: 1340px;
-        box-sizing: border-box;
-        margin: 0 auto;
-    }
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
     
 }
 
+/* Conteneur principal */
 
 .hebergement-layout{
     display: flex;
     gap: 40px;
     width: 100%;
-    max-width: 1340px;
+    max-width: 100%;
     
 
 }
 
+/* Conteneur des hébergements */
 .hebergement-container{
     display: flex;
     flex-direction: column;
@@ -290,28 +320,34 @@ nav a:hover::after {
     padding: 30px;
     background: #F2F2F2;
     flex: 2;
+    width: 100%;
+    max-width: 100%;
 
 }
 
 
 .hebergement h2{
-    width: 811px;
     height: 26px;
     font-family: Raleway;
     font-weight: 700;
     font-size: 22px;
     line-height: 25.83px;
     letter-spacing: 0%;
+    width: 100%;
+    max-width: 100%;
 
 
 
 
 }
 
+/* Cartes d'hébergement */
 .cards-wrapper{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    width: 100%;
+    max-width: 100%;
 }
 
 
@@ -319,56 +355,72 @@ nav a:hover::after {
 .card-container{
     display: flex;
     flex-direction: column;
-    width: 250px;
     background: white;
     gap: 4px;
     padding-bottom: 15px;
     border-radius: 20px;
     box-shadow: 0px 3px 15px 0px #0000001A;
+    height: 210px;
+    max-width: 250px;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+
 }
 
 .card-content{
+    display: flex;
+    flex-direction: column;
     padding-right: 15px;
     padding-left: 15px;
     gap: 8px;
-
+    width: 100%;
+    max-width: 100%;
 }
 
 .hebergement h3{
-    width: 220px;
-    height: 19px;
-    font-size: 19px;
     font-weight: 700;
     font-family: Raleway;
     line-height: 18px;
     color: #000;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
 }
 
 .hebergement p{
-    width: 220px;
-    height: 16px;
     font-family: Raleway;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0%;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
 
 }
 
 
 .card-container img {
-    width: 250px;
-    height: 124px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-width: 5px;
-    border: 1px solid #FFFFFF
+    border: 1px solid #FFFFFF;
+    border: 5px solid #FFFFFF;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    height: 60%
 }
 
 .note{
-    display:inline;
+    display:flex;
+    gap: 5px;
+    margin-top: auto;
     width : 81px;
     height: 13.25px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .star-blue{
@@ -400,7 +452,6 @@ nav a:hover::after {
 
 
 .show-more{
-    width: 811px;
     height: 21px;
     font-family: Raleway;
     font-weight: 700;
@@ -408,39 +459,57 @@ nav a:hover::after {
     line-height: 21.13px;
     letter-spacing: 0%;
     color: #000;
+    text-decoration: none;
+    width: 100%;
+    max-width: 100%;
+    margin-top: auto
 }
 
+
+/* ====== SECTION LES PLUS POPULAIRES ====== */
+/* Conteneur des cartes populaires */
 .popular-container{
     display: flex;
     flex: 1;
     flex-direction: column;
     background-color: #F2F2F2;
     border-radius: 15px;
+    width: 100%;
+    max-width: 100%;
 }
 
+
+.popular-container-title{
+    display: flex;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items: center;
+}
+
+.popular-container-title i{
+    color: #0065FC;
+    size: 18px;
+}
+
+/* Conteneur des cartes populaires */
 .popular-cards-wrapper{
     display: flex;
     flex-direction: column;
     padding: 30px;
     gap: 30px;
+    width: 100%;
+    max-width: 100%;
 
 }
 
 
-.popular-container-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 369px;
-    height: 26px;
-}
 
 .popular-container-title i{
     color: #0065FC;
 }
 
 .popular-container h2{
-    width: 300px;
     height: 26px;
     font-family: Raleway;
     font-weight: 700;
@@ -448,52 +517,63 @@ nav a:hover::after {
     line-height: 25.83px;
     letter-spacing: 0%;
     color: #000000;
-    padding: 30px;
+    width: 100%;
+    max-width: 100%;
 }
 
-
+/* Carte populaire */
 .popular-card{
     display: flex;
     align-items: center;
-    width: 369px;
     height: 160px;
     background: white;
     border-radius: 20px;
     box-shadow: 0px 3px 15px 0px #0000001A;
+    width: 100%;
+    max-width: 100%;
+    text-decoration: none;
+    color: inherit;
 }
 
 .popular-content{
-    width: 246px;
+    display: flex;
+    flex-direction: column;
     height: 136px;
     top: 5px;
     left: 123px;
-    gap: 24px;
+    gap: 5px;
     padding-top: 10px;
     padding-right: 5px;
     padding-bottom: 5px;
-    padding-left: 15px;
+    padding-left: 1vw;
+    width: 50%;
 
 }
 
 .popular-card img{
     height: 160px;
-    width: 369px
+    width: 50%;
+    max-width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 5px solid #FFFFFF;
 }
 
 
-.popular-content-text h3{
-    width: 226px;
-    height: 19px;
+.hebergement h3{
     font-family: Raleway;
     font-weight: 700;
     font-size: 16px;
     line-height: 18.78px;
     letter-spacing: 0%;
     color: #000000;
+    width: 100%;
+    max-width: 100%;
 }
 
 
-.popular-content-text p{
+.popular-content p{
     font-family: Raleway;
     font-weight: 400;
     font-size: 14px;
@@ -504,45 +584,58 @@ nav a:hover::after {
     font-size: 14px;
     line-height: 16.44px;
     letter-spacing: 0%;
+    width: 100%;
+    max-width: 100%;
 }
 
+
+/* ====== SECTION ACTIVITÉS ====== */
+/* Mise en page globale */
 .activites{
-    height: 559px;
     padding: 30px;
     gap: 30px;
     max-width: 100%;
     width: 100%;
-    box-sizing: border-box
 }
 
 .activites h2{
-    width: 1280px;
     height: 30px;
     font-family: Raleway;
     font-weight: 700;
     font-size: 22px;
     line-height: 25.83px;
     letter-spacing: 0%;
-    color:#000
+    color:#000;
+    width: 100%;
+    max-width: 100%;
 }
 
+/* Cartes d'activités */
 .activites-wrapper{
     display: flex;
-    width: 100%;
-    height: 439px;
+    height: 100%;
     gap: 30px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .activite-card{
-    width: 297.5px;
-    height: 439px;
     border-radius: 20px;
     box-shadow: 0px 3px 15px 0px #0000001A;
+    width: 100%;
+    max-width: 100%;
+    text-decoration: none;
+}
+
+.activite-card img{
+    width: 100%;
+    object-fit: fill;
+    height: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px
 }
 
 .activite-content{
-    width: 297.5px;
-    height: 59px;
     gap: 10px;
     padding-right: 19px;
     padding-bottom: 20px;
@@ -550,10 +643,13 @@ nav a:hover::after {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     color: white;
+    width: 100%;
+    max-width: 100%;
 }
 
 .activite-content p{
-    width: 259.5px;
+    width: 100%;
+    max-width: 100%;
     height: 19px;
     font-family: Raleway;
     font-weight: 700;
@@ -563,7 +659,9 @@ nav a:hover::after {
     color: #000;
 }
 
-/* Footer */
+
+/* ====== FOOTER ====== */
+/* Mise en page du footer */
 .footer {
     display: flex;
     justify-content: space-between;
@@ -572,6 +670,8 @@ nav a:hover::after {
     padding: 40px 50px;
     width: 100%;
     margin-top: auto;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* Colonnes du footer */
@@ -607,13 +707,29 @@ nav a:hover::after {
     transition: color 0.3s ease-in-out;
 }
 
+
+/* Tablette (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: flex-start;
+    }
+
+
     .container {
         display: flex;
         flex-direction: column;
         gap: 35px;
-        max-width: 100%;  
+        width: 100%;
+        max-width: 100%;
         padding: 0 50px;
+    }
+
+    img, h3, p{
+        max-width: 100%;
     }
 
     .hebergement {
@@ -621,7 +737,10 @@ nav a:hover::after {
         justify-content: center;
         flex-direction: row;
         width: 100%;
+        max-width: 100%;
     }
+
+
 
     .hebergement-layout {
         display: flex;
@@ -630,7 +749,24 @@ nav a:hover::after {
         align-items: flex-start;
         align-items: stretch;
         width: 100%;
+        max-width: 100%;
         gap: 50px;
+    }
+
+    .hebergement-container{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cards-wrapper{
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    .card-container img{
+        border: 5px solid #FFFFFF;
+
     }
 
     .note{
@@ -652,22 +788,28 @@ nav a:hover::after {
     }
 
     .popular-card {
-        width: 275px;
+        width: 100%;
+        max-width: 100%;
         height: 146px;
         border-radius: 20px;
 
     }
 
     .popular-card img{
-        width: 91px;
-        height: 146px;
-        border-radius: 1%;
+        width: 35%;
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border: 5px solid #FFFFFF;
+        border-color: white;
     }
 
     .popular-content {
         display: flex;
         flex-direction: column;
-        width: 163px;
+        width: 50%;
         height: 136px;
         top: 5px;
         left: 91px;
@@ -684,60 +826,82 @@ nav a:hover::after {
         font-size: 16px;
         line-height: 100%;
         letter-spacing: 0%;
-        width: 163px;
+        width: 100%;
+        max-width: 100%;
     }
         
 
     .activites{
         display: flex;
         flex-direction: column;
+        width: 100%;
+        max-width: 100%;
     }
 
 
     .activites-wrapper {
         width: 100%;
-        max-width: 924px;
+        max-width: 100%;
     }
 
     .activite-card {
-        width: 193px;
-        height: 270px;
+        width: 100%;
+        max-width: 100%;
         border-radius: 20px;
+        height: 270px;
     }
 
 
     .activite-card img {
-        width: 193px;
-        height: 200px;
+        width: 100%;
+        max-width: 100%;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        height: 200px;
+    }
+
+    .activite-content {
+    gap: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
     }
 
 
+
+
     .activite-content p {
-        width: 155.5px;
         height: 38px;
         font-family: Raleway;
         font-weight: 700;
         font-size: 16px;
         line-height: 100%;
         letter-spacing: 0%;
-
-
+        width: 100%;
+        max-width: 100%;
     }
 }
 
 
 
+/* Mobile (max-width: 768px) */
 
+@media screen and (max-width: 768px) {
+    
+    body{
 
-@media screen and (max-width: 375px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
     
     .container {
         display: flex;
         flex-direction: column;
         max-width: 100%;
-        padding: 0 20px;
+        padding: 0px;
         gap: 30px;
     }
 
@@ -746,23 +910,55 @@ nav a:hover::after {
         flex-direction: column;
         align-items: center;
         height: 115px;
+        display: flex;
+        gap: 20px;
     }
 
-    header #logo{
-
-        width: 120px;
+    header .logo{
         padding: 30px;
 
     }
 
     nav {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 375px;
-        height: 36px;
-        gap: 15px;
+        width: 100%;
+        padding: 0;
         
+    }
+
+    nav ul {
+        display: flex;
+        gap: 0px;
+        width: 100%;
+        padding: 0;
+        border-bottom: 1px solid #f2f2f2;
+
+    }
+
+    nav ul li {
+        display: flex;
+        width: 50%;
+        justify-content: center;
+    }
+
+
+    nav a:active, nav a:focus {
+        color: #0065FC;
+        border-bottom: 2px solid #0065FC;
+    }
+
+
+    nav a{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    color: black;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    }
+
+    nav a:hover::after {
+        display: none !important;
     }
 
 
@@ -771,17 +967,21 @@ nav a:hover::after {
         flex-direction: column;
         gap: 35px;
         width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+
     }
 
-    #search-section-title{
+    .search-section-title{
         display: flex;
         flex-direction: column;
-        width: 335px;
         gap: 8px;
+
     }
 
-    #search-section-title h1{
-        width: 335px;
+    .search-section h1{
+        display: flex;
+        justify-content: flex-start;
         font-family: Raleway;
         font-weight: 700;
         font-size: 22px;
@@ -793,8 +993,56 @@ nav a:hover::after {
     .search-bar{
         display: flex;
         align-items: center;
+        justify-content: space-between;
         width: 100%;
+        max-width: 100%;
+        
+       
     }
+
+
+    .search-bar .icon{
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-width: 1px;
+        width: 100%;
+        max-width: 50px;
+
+    }
+
+    .search-bar input {
+        text-align: justify;
+    }
+
+    .search-bar button{
+        border-radius: 15px;
+        border: #0065FC;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+
+    .search-bar button .search-icon{
+        display: flex;
+    }
+
+
+    .button-text{
+        display: none;
+    }
+
+
+    .search-icon{
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    form {
+        width: 60%;
+        max-width: 100%;
+
+    }
+      
 
     .filters{
         display: flex;
@@ -802,7 +1050,6 @@ nav a:hover::after {
         gap: 10px;
         justify-content: 10px;
         width: 100%;
-        max-width: 335px;
         margin: auto;
     }
 
@@ -822,10 +1069,16 @@ nav a:hover::after {
         justify-content: center;
 }
 
+
+
+
+
     .hebergement-layout {
 
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
+        width: 100%;
+        max-width: 100%;
 
     }
 
@@ -833,13 +1086,117 @@ nav a:hover::after {
     .hebergement .cards-wrapper{
         display: flex;
         flex-direction: column;
-        max-width: 375px;
         width: 100%;
+        max-width: 100%;
+
     }
 
     .hebergement-container{
-        max-width: 375px;
         width: 100%;
+        max-width: 100%;
+        background: none;
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    .card-container {
+    
+        width: 100%;
+        max-width: 100%;
+        height: fit-content;
+
+    }
+
+    .card-container img {
+        width: 100%;
+        max-width: 100%;
+        height: 180px;
+
+    }
+
+
+    .popular-container {
+
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 0px;
+        
+    }
+
+    
+    .popular-cards-wrapper {
+    
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+    }
+
+
+    .popular-card {
+        width: 100%;
+        max-width: 100%;
+        height: 160px;
+
+
+    }
+
+
+    .activites {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .activites-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+
+    .activite-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        height: 210px;
+
+    }
+
+    .activite-card img {
+        object-fit: cover;
+        height: 145px;
+
+    }
+
+
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 100%;
+        width: 100%;
+        gap: 50px;
+        padding-left: 30px;
+    }
+
+
+    .footer-column ul{
+        display: flex;
+        flex-direction: column;
+        gap: 15px
+        ;
+
     }
 
 }

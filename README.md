@@ -19,7 +19,6 @@
  - **Google Fonts** - Typographie Raleway.
 
 ## 🎨 Intégration de la maquette
-La maquette originale du site a été respectée pixel-perfect en utilisant :
 - **Flexbox** pour l'agencement des blocs.
 - **Grid Layout** pour la disposition des cartes.
 - **Classes CSS bien structurées** pour faciliter la maintenabilité.
